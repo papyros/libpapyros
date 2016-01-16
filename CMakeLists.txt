@@ -10,6 +10,8 @@ endif()
 # Set version
 set(PROJECT_VERSION "0.1.0")
 set(PROJECT_VERSION_MAJOR 0)
+set(PROJECT_VERSION_MINOR 1)
+set(PROJECT_VERSION_PATCH 0)
 set(PROJECT_SOVERSION 0)
 
 # Build flags
