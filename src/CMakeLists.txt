@@ -20,7 +20,7 @@ set(SOURCES
 
 add_library(Papyros SHARED ${SOURCES})
 generate_export_header(Papyros EXPORT_FILE_NAME papyros/papyros_export.h)
-add_library(Papyros::Papyros ALIAS Papyros)
+add_library(Papyros::Core ALIAS Papyros)
 
 target_link_libraries(Papyros
     PUBLIC
