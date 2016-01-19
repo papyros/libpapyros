@@ -1,6 +1,6 @@
 include_directories(${CMAKE_BINARY_DIR}/src)
 
-set(SOURCES plugin.cpp)
+set(SOURCES plugin.cpp clipboard.cpp)
 
 add_library(papyroscore SHARED ${SOURCES})
 target_link_libraries(papyroscore

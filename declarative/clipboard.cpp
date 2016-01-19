@@ -16,16 +16,16 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "plugin.h"
-
-#include <Papyros/KQuickConfig>
 #include "clipboard.h"
 
-void Plugin::registerTypes(const char *uri)
-{
-    // @uri Papyros.Core
-    Q_ASSERT(uri == QStringLiteral("Papyros.Core"));
+#include <QGuiApplication>
 
-    qmlRegisterType<KQuickConfig>(uri, 0, 2, "KQuickConfig");
-    qmlRegisterType<Clipboard>(uri, 0, 2, "Clipboard");
+Clipboard::Clipboard(QObject *parent) : QObject(parent), m_clipboard(QGuiApplication::clipboard())
+{
+    // Nothing needed here
+}
+
+QString Clipboard::text() const
+{
+    return m_clipboard->text();
 }
