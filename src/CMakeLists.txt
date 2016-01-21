@@ -35,7 +35,7 @@ target_include_directories(Papyros INTERFACE "$<INSTALL_INTERFACE:${PAPYROS_INCL
 
 set_target_properties(Papyros PROPERTIES VERSION   ${PROJECT_VERSION}
                                          SOVERSION ${PROJECT_SOVERSION}
-                                         EXPORT_NAME Papyros
+                                         EXPORT_NAME Core
 )
 
 ecm_generate_headers(Papyros_CamelCase_HEADERS
