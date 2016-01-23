@@ -19,6 +19,7 @@
 #include "plugin.h"
 
 #include <Papyros/KQuickConfig>
+#include <Papyros/KQuickWallet>
 #include "clipboard.h"
 
 void Plugin::registerTypes(const char *uri)
@@ -27,5 +28,6 @@ void Plugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QStringLiteral("Papyros.Core"));
 
     qmlRegisterType<KQuickConfig>(uri, 0, 2, "KQuickConfig");
+    qmlRegisterType<KQuickWallet>(uri, 0, 2, "KQuickWallet");
     qmlRegisterType<Clipboard>(uri, 0, 2, "Clipboard");
 }

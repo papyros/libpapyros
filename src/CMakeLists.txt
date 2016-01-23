@@ -16,6 +16,7 @@ include_directories(
 set(SOURCES
     config/kquickconfig.cpp
     qquicklist/qobjectlistmodel.cpp
+    wallet/kquickwallet.cpp
 )
 
 add_library(Papyros SHARED ${SOURCES})
@@ -27,6 +28,7 @@ target_link_libraries(Papyros
         Qt5::Core
         Qt5::Qml
         KF5::ConfigCore
+        KF5::Wallet
 )
 
 set(PAPYROS_INCLUDEDIR "${CMAKE_INSTALL_INCLUDEDIR}/Papyros")
@@ -53,6 +55,14 @@ ecm_generate_headers(Papyros_CamelCase_HEADERS
     Papyros
   REQUIRED_HEADERS Papyros_HEADERS
   RELATIVE qquicklist
+)
+ecm_generate_headers(Papyros_CamelCase_HEADERS
+  HEADER_NAMES
+    KQuickWallet
+  PREFIX
+    Papyros
+  REQUIRED_HEADERS Papyros_HEADERS
+  RELATIVE wallet
 )
 
 install(FILES ${Papyros_CamelCase_HEADERS}
