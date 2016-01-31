@@ -32,6 +32,8 @@ class PAPYROS_EXPORT KQuickWallet : public QObject
     Q_PROPERTY(WalletStatus status READ status NOTIFY statusChanged)
     Q_PROPERTY(bool enabled READ isEnabled CONSTANT)
 
+    Q_ENUMS(WalletStatus)
+
 public:
     enum WalletStatus
     {
@@ -39,7 +41,6 @@ public:
         Closed,
         Error
     };
-    Q_ENUM(WalletStatus)
 
     KQuickWallet(QObject *parent = nullptr);
     ~KQuickWallet();
