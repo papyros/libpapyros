@@ -1,6 +1,18 @@
 Papyros Core Library CHANGELOG
 ==============================
 
+### Version 0.2.0 (February 5, 2016)
+
+**Features**
+
+ * Add a QML module named Papyros.Core
+ * Add a QML wrapper around QClipboard called Clipboard
+ * Add a QML wrapper around KWallet called KQuickWallet
+
+**Bug fixes**
+
+ * Properly export the library as Papyros::Core instead of Papyros::Papyros
+
 ### Version 0.1.0 (January 15, 2016)
 
 **Features**
