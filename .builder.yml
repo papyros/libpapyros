@@ -3,6 +3,7 @@ dependencies:
     - qt5-declarative
     - extra-cmake-modules
     - kconfig
+    - kwallet
 build:
     - cmake {srcdir}
     - make
