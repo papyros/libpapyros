@@ -4,6 +4,7 @@ dependencies:
     - extra-cmake-modules
     - kconfig
     - kwallet
+    - ninja
 build:
-    - cmake {srcdir}
-    - make
+    - cmake {srcdir} -GNinja
+    - ninja
